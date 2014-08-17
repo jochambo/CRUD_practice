@@ -3,6 +3,8 @@ class CreateTrucks < ActiveRecord::Migration
     create_table :trucks do |t|
       t.string :name
       t.string :location
-      t.integer :user_id
+      t.integer :driver_id
+      t.integer :owner_id
+    end
   end
 end
