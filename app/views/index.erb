@@ -12,7 +12,11 @@
     <%= "rd" %>
   <% else %>
     <%= "th" %>
-  <% end %> Street</h3>
+  <% end %> Street
+</h3>
+<% truck.plates.each do |plate| %>
+  <p><%= plate.name %>: $<%= plate.price/10.0 %>0</p>
+<% end %>
 <% end %>
 
 </div>
