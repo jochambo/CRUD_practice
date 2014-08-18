@@ -4,7 +4,6 @@ class CreatePlates < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.integer :truck_id
-      t.integer :user_id
       t.integer :price
       t.timestamps
     end

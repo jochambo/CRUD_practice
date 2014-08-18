@@ -1,0 +1,22 @@
+<div class="container">
+<h1>Find A (Food)Truck</h1>
+
+<% @trucks.each do |truck| %>
+<h2><%=truck.name%></h2>
+<h3>We are currently at <%=truck.location%>
+  <% if truck.location == "1" %>
+    <%= "st" %>
+  <% elsif truck.location == "2" %>
+    <%= "nd" %>
+  <% elsif truck.location == "3" %>
+    <%= "rd" %>
+  <% else %>
+    <%= "th" %>
+  <% end %> Street
+</h3>
+<% truck.plates.each do |plate| %>
+  <p><%= plate.name %>: $<%= plate.price/10.0 %>0</p>
+<% end %>
+<% end %>
+
+</div>
